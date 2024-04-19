@@ -1,32 +1,57 @@
-const fileList = document.getElementById('file-list');
-const commandInput = document.getElementById('command-input');
-const output = document.getElementById('output');
+window.onload = function () {
+  var firstLineElement = document.getElementById('first-line');
+  var secondLineElement = document.getElementById('second-line');
 
-commandInput.addEventListener('keydown', function (event) {
-  if (event.key === 'Enter') {
-    const command = commandInput.value.trim();
-    handleCommand(command);
-    commandInput.value = '';
+  var terminalBody = document.querySelector('.terminal-body');
+  var elementsToHide = Array.from(terminalBody.children).slice(2);
+  elementsToHide.forEach(function (element) {
+    element.style.display = 'none';
+  });
+
+  var firstPrompt = document.querySelector('.first-prompt');
+  var secondPrompt = document.querySelector('.second-prompt');
+  var inputElement = document.querySelector('.prompt-for-text input');
+
+  var firstText = firstLineElement.textContent.trim();
+  var secondText = secondLineElement.textContent.trim();
+
+  firstLineElement.textContent = '';
+  secondLineElement.textContent = '';
+
+  var index = 0;
+  var typingSpeed = 60;
+  var delayToShowSecondPrompt = 1500;
+  var delayToShowSecondLine = 2500;
+  var delayToHideSecondPrompt = 0;
+  var delayToShowRemainingContent = 3500;
+
+  function typeText(targetElement, text, index = 0) {
+    if (index < text.length) {
+      targetElement.textContent += text.charAt(index);
+      setTimeout(function () {
+        typeText(targetElement, text, index + 1);
+      }, typingSpeed);
+    }
   }
-});
 
-function handleCommand(command) {
-  const commands = command.split(' ');
-  const mainCommand = commands[0];
-  const args = commands.slice(1);
+  typeText(firstLineElement, firstText);
 
-  switch (mainCommand) {
-    case 'ls':
-      output.innerHTML += `<span class="prompt">$ </span>${command}\n`;
-      fileList.innerHTML += '<li>new_project.txt</li>';
-      break;
-    case 'help':
-      output.innerHTML += `<span class="prompt">$ </span>${command}\n`;
-      output.innerHTML +=
-        '<span class="prompt">Available commands:</span> ls, help\n';
-      break;
-    default:
-      output.innerHTML += `<span class="prompt">$ </span>${command}\n`;
-      output.innerHTML += `<span class="prompt">Command not found:</span> ${mainCommand}\n`;
-  }
-}
+  setTimeout(function () {
+    secondPrompt.style.display = 'none';
+  }, delayToHideSecondPrompt);
+
+  setTimeout(function () {
+    secondPrompt.style.display = 'inline';
+  }, delayToHideSecondPrompt + delayToShowSecondPrompt);
+
+  setTimeout(function () {
+    typeText(secondLineElement, secondText);
+  }, delayToHideSecondPrompt + delayToShowSecondLine);
+
+  setTimeout(function () {
+    elementsToHide.forEach(function (element) {
+      element.style.display = 'block';
+    });
+    inputElement.focus();
+  }, delayToShowRemainingContent);
+};

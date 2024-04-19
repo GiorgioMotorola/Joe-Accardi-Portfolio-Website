@@ -24,24 +24,46 @@
           <div class="max-button">&#x25A1;</div>
           <div class="close-button">&#x2715;</div>
         </div>
-        <div class="body">
-          <span class="prompt"
+        <div class="terminal-body">
+          <span class="first-prompt"
             >PS C:\Users\
-            <span style="color: yellow"
+            <span style="color: yellow" id="first-line"
               >cd <span style="color: white">.\JoeAccardi\</span></span
             ></span
           >
-          <br />
-          <span class="prompt"
-            >PS C:\Users\JoeAccardi\
-            <span style="color: yellow">gci</span></span
+          <span class="second-prompt"
+            ><br />PS C:\Users\JoeAccardi>
+            <span style="color: yellow" id="second-line"
+              ><span style="color: white">gci</span></span
+            ></span
           >
-          <ul id="file-list">
-            <li>projects</li>
-            <li>about_me.txt</li>
-            <li>contact.txt</li>
-          </ul>
-          <pre><span class="prompt">$ </span><input type="text" id="command-input" autofocus></pre>
+          <div class="directory-line">Directory: C:\Users\JoeAccardi\</div>
+          <div class="dir-menu-top">
+            Mode<span style="margin-right: 150px"></span> LastWriteTime
+            <span style="margin-right: 100px"></span> Length Name
+          </div>
+          <div class="dir-menu-breaks">
+            ----<span style="margin-right: 150px"></span> -------------
+            <span style="margin-right: 100px"></span> ------ ----
+          </div>
+          <div class="dir-menu-content">
+            d-----<span style="margin-right: 60px"></span> 4/11/2024
+            <span style="margin-right: 20px"></span> 8:02 PM
+            <span style="margin-right: 180px"></span> about-me.txt
+          </div>
+          <div class="dir-menu-content">
+            d-----<span style="margin-right: 60px"></span> 4/9/2024
+            <span style="margin-right: 31px"></span> 7:42 PM
+            <span style="margin-right: 179px"></span> joe-accardi-projects
+          </div>
+          <div class="dir-menu-content">
+            d-----<span style="margin-right: 60px"></span> 3/28/2024
+            <span style="margin-right: 20px"></span> 5:41 PM
+            <span style="margin-right: 180px"></span> contact.txt
+          </div>
+          <span class="prompt-for-text"
+            >PS C:\Users\JoeAccardi><input type="text" autofocus />
+          </span>
         </div>
       </div>
     </div>

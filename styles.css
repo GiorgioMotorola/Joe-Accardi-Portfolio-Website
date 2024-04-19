@@ -8,7 +8,11 @@ body {
   font-family: 'Fira Code', monospace;
   font-optical-sizing: auto;
   font-style: normal;
-  font-size: 16px;
+  font-size: 19px;
+}
+
+.terminal-body {
+  padding: 0.6rem;
 }
 
 .title {
@@ -30,8 +34,8 @@ body {
 }
 
 #terminal {
-  width: 65rem;
-  height: 36rem;
+  width: 77.5rem;
+  height: 44rem;
   margin: 50px auto;
   border: 2px solid #fff;
   border-radius: 5px;
@@ -91,12 +95,22 @@ body {
   margin: 0;
 }
 
-#command-input {
-  border: none;
+.prompt-for-text {
+  margin-top: 2.5rem;
+}
+
+.prompt-for-text input {
   background-color: transparent;
+  border: none;
   color: #fff;
-  width: calc(100% - 40px);
   outline: none;
+  width: 100px;
+  margin-left: 0.5rem;
+}
+
+.directory-line {
+  text-indent: 3rem;
+  padding: 2.5rem;
 }
 
 ul {
