@@ -1,0 +1,110 @@
+body {
+  background-color: #000;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: 'Fira Code', monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-size: 16px;
+}
+
+.title {
+  background-color: #ffffff;
+  text-align: left;
+  display: flex;
+  justify-content: start;
+  margin-left: 1.75rem;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.title img {
+  width: 23px;
+  margin-right: 5px;
+}
+
+#desktop {
+  border: 10px solid #000;
+}
+
+#terminal {
+  width: 65rem;
+  height: 36rem;
+  margin: 50px auto;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  background-color: #012456;
+  color: #fff;
+}
+
+.header {
+  background-color: #ffffff;
+  padding: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+}
+
+.min-button,
+.max-button,
+.close-button {
+  cursor: pointer;
+  margin-right: 30px;
+}
+
+.max-button {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.close-button {
+  font-size: 20px;
+}
+
+.min-button {
+  margin-top: 4.5px;
+  font-size: 25px;
+}
+
+.button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.title {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.body {
+  padding: 10px;
+}
+
+#output {
+  margin: 0;
+}
+
+#command-input {
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  width: calc(100% - 40px);
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 5px;
+}

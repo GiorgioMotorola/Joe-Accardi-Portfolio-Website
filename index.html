@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yzyz</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="desktop">
+      <div id="terminal">
+        <div class="header">
+          <div class="title">
+            <img src="img/ps-icon.png" alt="Icon" />
+            Windows PowerShell
+          </div>
+          <div class="min-button">&#x2500;</div>
+          <div class="max-button">&#x25A1;</div>
+          <div class="close-button">&#x2715;</div>
+        </div>
+        <div class="body">
+          <span class="prompt"
+            >PS C:\Users\
+            <span style="color: yellow"
+              >cd <span style="color: white">.\JoeAccardi\</span></span
+            ></span
+          >
+          <br />
+          <span class="prompt"
+            >PS C:\Users\JoeAccardi\
+            <span style="color: yellow">gci</span></span
+          >
+          <ul id="file-list">
+            <li>projects</li>
+            <li>about_me.txt</li>
+            <li>contact.txt</li>
+          </ul>
+          <pre><span class="prompt">$ </span><input type="text" id="command-input" autofocus></pre>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
