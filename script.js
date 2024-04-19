@@ -1,4 +1,4 @@
-window.onload = function () {
+document.addEventListener('DOMContentLoaded', function () {
   var firstLineElement = document.getElementById('first-line');
   var secondLineElement = document.getElementById('second-line');
 
@@ -10,7 +10,6 @@ window.onload = function () {
 
   var firstPrompt = document.querySelector('.first-prompt');
   var secondPrompt = document.querySelector('.second-prompt');
-  var inputElement = document.querySelector('.prompt-for-text input');
 
   var firstText = firstLineElement.textContent.trim();
   var secondText = secondLineElement.textContent.trim();
@@ -52,6 +51,20 @@ window.onload = function () {
     elementsToHide.forEach(function (element) {
       element.style.display = 'block';
     });
-    inputElement.focus();
   }, delayToShowRemainingContent);
-};
+
+  document
+    .getElementById('about-link')
+    .addEventListener('click', function (event) {
+      event.preventDefault();
+
+      const aboutMeContent = `
+      <h1>Hello! I'm Joe Accardi</h1>
+      <img src="img/joe.jpg" alt="Joe" class="about-me-img" style="width: 100%; max-width: 400px; height: auto; border-radius: 10px;">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</p>
+
+      `;
+
+      terminalBody.innerHTML += '<div>' + aboutMeContent + '</div>';
+    });
+});
