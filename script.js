@@ -55,14 +55,14 @@ document.addEventListener('DOMContentLoaded', function () {
   }, delayToShowRemainingContent);
 
   const aboutMeContent = `
-    <div class="intro">
+      <div class="intro">
       <img src="img/joe.jpg" alt="Joe" class="about-me-img">
       <h1 class="hello">Hello! I'm Joe Accardi</h1>
-    </div>
-    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</div>
+      </div>
+      <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</div>
   `;
 
   const projectsContent = `<div class="project-title">Check out my <span style="color: grey; font-size: 50px; font-weight: 800;">&nbsp;Projects</span>
@@ -80,18 +80,10 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>`;
 
   function showPanel(content) {
-    const existingPanel = document.querySelector('.panel');
-    if (existingPanel) {
-      existingPanel.innerHTML = `${content}<button class="close-panel-button">Close</button>`;
-      return;
-    }
-
     const panel = document.createElement('div');
     panel.className = 'panel';
     panel.innerHTML = `${content}<button class="close-button">&times;</button>`;
     document.body.appendChild(panel);
-    panel.style.bottom = '0';
-    panel.style.left = '0';
 
     const closeButton = panel.querySelector('.close-button');
     closeButton.addEventListener('click', function () {
@@ -101,12 +93,32 @@ document.addEventListener('DOMContentLoaded', function () {
     const overlay = document.createElement('div');
     overlay.className = 'overlay';
     document.body.appendChild(overlay);
+
+    currentPanel = panel;
+  }
+
+  let currentPanel = null;
+
+  function togglePanel(content) {
+    if (!currentPanel) {
+      showPanel(content);
+    } else if (currentPanel.innerHTML === content) {
+      hidePanel(currentPanel);
+      currentPanel = null;
+    } else {
+      hidePanel(currentPanel);
+      showPanel(content);
+    }
   }
 
   function hidePanel(panel) {
     panel.classList.add('closing');
     setTimeout(() => {
       panel.remove();
+      const overlay = document.querySelector('.overlay');
+      if (overlay) {
+        overlay.remove();
+      }
     }, 500);
   }
 
@@ -114,7 +126,7 @@ document.addEventListener('DOMContentLoaded', function () {
     link.addEventListener('click', function (event) {
       event.preventDefault();
       const content = getContentForLink(link.id);
-      showPanel(`<div>${content}</div>`);
+      togglePanel(`<div>${content}</div>`);
     });
   });
 
