@@ -151,3 +151,20 @@ document.addEventListener('DOMContentLoaded', function () {
   updateTime();
   setInterval(updateTime, 1000);
 });
+
+function changeBackgroundImage(imageUrl) {
+  document.body.style.backgroundImage = `url(${imageUrl})`;
+}
+
+document
+  .getElementById('imageInput')
+  .addEventListener('change', function (event) {
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        changeBackgroundImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
+  });
