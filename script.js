@@ -59,12 +59,25 @@ document.addEventListener('DOMContentLoaded', function () {
       <img src="img/joe.jpg" alt="Joe" class="about-me-img">
       <h1 class="hello">Hello! I'm Joe Accardi</h1>
     </div>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</p>
+    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</div>
   `;
 
-  const projectsContent = `<p>Projects content goes here</p>`;
+  const projectsContent = `<div class="project-title">Check out my <span style="color: grey; font-size: 50px; font-weight: 800;">&nbsp;Projects</span>
+  </div><div class="project-container">
+  <div class="project-1"><h1>Project One</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
+  <div class="project-2"><h1>Project Two</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
+  <div class="project-3"><h1>Project Three</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
+  </div>`;
 
-  const contactContent = `<p>Contact content goes here</p>`;
+  const contactContent = `<div class="contact-title">Get in <span style="color: grey; font-size: 50px; font-weight: 800;">&nbsp;Touch</span></div>
+  <div class="contact-container">
+  <h2><a href="mailto:joe@example.com" target="_blank">EMAIL: joe@example.com</a></h2>
+  <h2><a href="https://www.example.com" target="_blank">GITHUB: www.example.com</a></h2>
+  <h2><a href="https://www.example.com" target="_blank">LINKEDIN: www.example.com</a></h2>  
+  </div>`;
 
   function showPanel(content) {
     const existingPanel = document.querySelector('.panel');
