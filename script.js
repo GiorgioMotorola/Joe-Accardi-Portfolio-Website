@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   }, delayToHideSecondPrompt);
 
   setTimeout(function () {
-    secondPrompt.style.display = 'inline';
+    secondPrompt.style.display = 'block';
   }, delayToHideSecondPrompt + delayToShowSecondPrompt);
 
   setTimeout(function () {

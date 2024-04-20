@@ -66,6 +66,10 @@ body {
   color: black;
 }
 
+.second-prompt {
+  margin-top: -25px;
+}
+
 .min-button,
 .max-button,
 .close-button-x {
