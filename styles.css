@@ -310,6 +310,10 @@ li {
   color: black;
 }
 
+.panel.closing {
+  animation: close-animation 0.5s forwards;
+}
+
 @keyframes open-animation {
   from {
     bottom: -100%;
@@ -320,10 +324,6 @@ li {
     bottom: 0;
     left: 0;
   }
-}
-
-.panel.closing {
-  animation: close-animation 0.5s forwards;
 }
 
 @keyframes close-animation {
