@@ -520,12 +520,19 @@ input[type='file'] {
 @media (max-width: 500px) {
   * {
     font-size: 13px;
+    max-width: 100%;
+    margin: 0 auto;
+    overflow-x: hidden;
+  }
+
+  body {
   }
 
   #terminal {
-    width: 30rem;
+    width: 100%;
     height: auto;
     min-height: 80vh;
+    overflow: visible;
   }
 
   .dir-menu-content,
@@ -634,5 +641,29 @@ input[type='file'] {
 
   .prompt-for-text input {
     font-size: 10px;
+  }
+
+  .min-button,
+  .max-button,
+  .close-button-x {
+    margin-right: 30px;
+  }
+
+  .max-button {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+
+  .close-button-x {
+    font-size: 10px;
+  }
+
+  .min-button {
+    margin-top: 4.5px;
+    font-size: 11px;
+  }
+
+  .windows-toolbar {
+    display: none;
   }
 }
