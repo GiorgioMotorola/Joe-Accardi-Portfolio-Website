@@ -25,9 +25,9 @@ body {
 .desktop-icons {
   display: flex;
   flex-direction: column;
-  width: 55px;
+  width: 45px;
   height: auto;
-  margin: 10px;
+  margin: 5px;
   gap: 1rem;
 }
 
@@ -499,7 +499,7 @@ input[type='file'] {
   }
 
   .desktop-icons-recycle {
-    margin-top: 53px;
+    margin-top: 0px;
   }
 
   .prompt-for-text {
