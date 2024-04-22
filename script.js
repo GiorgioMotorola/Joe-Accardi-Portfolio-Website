@@ -56,14 +56,15 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const aboutMeContent = `
     <div class="intro">
+    <div class="about-title">Hello, I'm <span style="color: grey; font-size: 50px; font-weight: 800;">Joe Accardi</span>
+</div><div class="about-container">
     <img src="img/joe.jpg" alt="Joe" class="about-me-img">
-    <h1 class="hello">Hello! I'm Joe Accardi</h1>
     </div>
     <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</div>
-`;
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
+    </div>`;
 
   const projectsContent = `<div class="project-title">Check out my <span style="color: grey; font-size: 50px; font-weight: 800;">&nbsp;Projects</span>
 </div><div class="project-container">
