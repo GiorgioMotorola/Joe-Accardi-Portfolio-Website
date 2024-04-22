@@ -1,8 +1,6 @@
 * {
   font-family: 'Fira Code', monospace;
   font-optical-sizing: auto;
-  font-style: normal;
-  font-size: 15px;
 }
 
 body {
@@ -191,10 +189,9 @@ body {
   border: none;
   color: #fff;
   outline: none;
-  width: 750px;
-  margin-left: 0.5rem;
+  width: 500px;
+  margin-left: 0rem;
   font-size: 15px;
-  font-family: 'Fira Code', monospace;
 }
 
 .directory-line {
@@ -252,31 +249,6 @@ li {
 .start-button img {
   width: 100px;
   height: auto;
-}
-
-.time-display {
-  font-family: 'MS Sans Serif', Arial, sans-serif;
-  font-size: 18px;
-  color: #000;
-  text-shadow: 1px 1px 1px #fff;
-  padding: 10px;
-  background-color: #c0c0c0;
-  border: 1px solid #808080;
-  box-shadow: rgba(50, 50, 93, 0.18) 0px 30px 60px -12px inset,
-    rgba(0, 0, 0, 0.179) 0px 18px 36px -18px inset;
-  margin-top: -6px;
-  margin-right: 5px;
-}
-
-.start-button img {
-  width: 100px;
-  height: auto;
-}
-
-.taskbar-icons img {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
 }
 
 .time-display {
@@ -525,13 +497,10 @@ input[type='file'] {
     overflow-x: hidden;
   }
 
-  body {
-  }
-
   #terminal {
-    width: 100%;
+    width: 99%;
     height: auto;
-    min-height: 80vh;
+    min-height: 70vh;
     overflow: visible;
   }
 
@@ -643,10 +612,18 @@ input[type='file'] {
     font-size: 10px;
   }
 
+  .windows-toolbar {
+    display: none;
+  }
+
+  .title {
+    margin-right: 100px;
+  }
+
   .min-button,
   .max-button,
   .close-button-x {
-    margin-right: 30px;
+    margin-right: 15px;
   }
 
   .max-button {
@@ -663,7 +640,9 @@ input[type='file'] {
     font-size: 11px;
   }
 
-  .windows-toolbar {
-    display: none;
+  .title img {
+    width: 20px;
+    margin-left: 0px;
+    height: 20px;
   }
 }
