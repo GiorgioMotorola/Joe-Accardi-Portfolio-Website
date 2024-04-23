@@ -233,18 +233,19 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(updateTime, 1000);
 });
 
-function changeBackgroundImageFromFile(file) {
-  if (file) {
-    const reader = new FileReader();
-    reader.onload = function () {
-      changeBackgroundImage(reader.result);
-    };
-    reader.readAsDataURL(file);
-  }
+function changeBackgroundImage(imageUrl) {
+  document.body.style.backgroundImage = `url(${imageUrl})`;
 }
 
 document
   .getElementById('imageInput')
   .addEventListener('change', function (event) {
-    changeBackgroundImageFromFile(event.target.files[0]);
+    const file = event.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = function () {
+        changeBackgroundImage(reader.result);
+      };
+      reader.readAsDataURL(file);
+    }
   });
