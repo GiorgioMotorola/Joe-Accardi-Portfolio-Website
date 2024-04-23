@@ -678,4 +678,16 @@ input[type='file'] {
   .about-title {
     font-size: 15px;
   }
+
+  .contact-icon {
+    font-size: 55px;
+  }
+
+  .project img {
+    width: 80px;
+  }
+
+  .project p {
+    font-size: 13px;
+  }
 }
