@@ -33,11 +33,12 @@ body {
 
 .title {
   background-color: #ffffff;
-  text-align: left;
   display: flex;
   justify-content: start;
   margin-left: 1.75rem;
   font-family: 'Segoe UI', Arial, sans-serif;
+  flex-grow: 1;
+  font-size: 15px;
 }
 
 .title img {
@@ -63,7 +64,6 @@ body {
 
 .header {
   background-color: #ffffff;
-  padding: 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,6 +106,7 @@ body {
 .title {
   flex-grow: 1;
   text-align: center;
+  font-size: 15px;
 }
 
 #output {
@@ -638,6 +639,7 @@ input[type='file'] {
 
   .title {
     margin-right: 100px;
+    font-size: 11px;
   }
 
   .min-button,
@@ -648,15 +650,16 @@ input[type='file'] {
 
   .max-button {
     font-size: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 1px;
   }
 
   .close-button-x {
     font-size: 10px;
+    margin-top: 3.5px;
   }
 
   .min-button {
-    margin-top: 4.5px;
+    margin-top: 5px;
     font-size: 11px;
   }
 
@@ -664,6 +667,10 @@ input[type='file'] {
     width: 20px;
     margin-left: 0px;
     height: 20px;
+  }
+
+  .header {
+    align-items: start;
   }
 
   .panel {
