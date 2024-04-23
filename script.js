@@ -1,5 +1,9 @@
 document.addEventListener('DOMContentLoaded', function () {
   var firstLineElement = document.getElementById('first-line');
+  var firstLineSecondElement = document.getElementById(
+    'first-line-second-text'
+  );
+
   var secondLineElement = document.getElementById('second-line');
 
   var terminalBody = document.querySelector('.terminal-body');
@@ -8,10 +12,10 @@ document.addEventListener('DOMContentLoaded', function () {
     element.style.display = 'none';
   });
 
-  var firstPrompt = document.querySelector('.first-prompt');
   var secondPrompt = document.querySelector('.second-prompt');
 
   var firstText = firstLineElement.textContent.trim();
+  var firstLineSecondText = ' .\\JoeAccardi\\';
   var secondText = secondLineElement.textContent.trim();
 
   firstLineElement.textContent = '';
@@ -33,6 +37,22 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   typeText(firstLineElement, firstText);
+
+  setTimeout(function () {
+    var delayBetweenCharacters = 70;
+    var textIndex = 0;
+    var typingInterval = setInterval(function () {
+      if (textIndex < firstLineSecondText.length) {
+        firstLineElement.innerHTML +=
+          '<span style="color: rgb(255, 255, 255)">' +
+          firstLineSecondText.charAt(textIndex) +
+          '</span>';
+        textIndex++;
+      } else {
+        clearInterval(typingInterval);
+      }
+    }, delayBetweenCharacters);
+  }, firstText.length * typingSpeed);
 
   setTimeout(function () {
     secondPrompt.style.display = 'none';
@@ -153,12 +173,23 @@ document.addEventListener('DOMContentLoaded', function () {
     const links = document.querySelectorAll('.dir-menu-content a');
     const inputText = input.trim();
 
-    links.forEach((link, index) => {
-      if (inputText === `${index + 1}` || inputText === link.textContent) {
+    links.forEach((link) => {
+      if (inputText === link.textContent) {
         link.click();
         inputField.value = '';
+        return;
       }
     });
+
+    const fileNames = ['resume.pdf', 'change-background.png'];
+    if (fileNames.includes(inputText)) {
+      if (inputText === 'resume.pdf') {
+        window.open('path_to_resume.pdf');
+      } else if (inputText === 'change-background.png') {
+        document.getElementById('imageInput').click();
+        inputField.value = '';
+      }
+    }
   }
 
   function updateTime() {
@@ -176,19 +207,18 @@ document.addEventListener('DOMContentLoaded', function () {
   setInterval(updateTime, 1000);
 });
 
-function changeBackgroundImage(imageUrl) {
-  document.body.style.backgroundImage = `url(${imageUrl})`;
+function changeBackgroundImageFromFile(file) {
+  if (file) {
+    const reader = new FileReader();
+    reader.onload = function () {
+      changeBackgroundImage(reader.result);
+    };
+    reader.readAsDataURL(file);
+  }
 }
 
 document
   .getElementById('imageInput')
   .addEventListener('change', function (event) {
-    const file = event.target.files[0];
-    if (file) {
-      const reader = new FileReader();
-      reader.onload = function () {
-        changeBackgroundImage(reader.result);
-      };
-      reader.readAsDataURL(file);
-    }
+    changeBackgroundImageFromFile(event.target.files[0]);
   });

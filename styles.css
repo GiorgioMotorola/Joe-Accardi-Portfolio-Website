@@ -293,6 +293,7 @@ li {
   text-align: center;
   color: #000000;
   font-size: 25px;
+  margin-top: 10%;
 }
 
 .about-container {
@@ -344,6 +345,7 @@ li {
   text-align: center;
   color: #000000;
   font-size: 25px;
+  margin-top: 10%;
 }
 
 .project-container {
@@ -352,8 +354,9 @@ li {
   align-items: center;
   flex-direction: column;
   height: 70vh;
-  gap: 100px;
+  gap: 80px;
   text-align: center;
+  font-size: 12px;
 }
 
 .project-1,
@@ -504,6 +507,10 @@ input[type='file'] {
 
   .prompt-for-text {
     text-wrap: nowrap;
+  }
+
+  .second-prompt {
+    margin-top: -22px;
   }
 }
 
