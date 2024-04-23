@@ -39,7 +39,7 @@ document.addEventListener('DOMContentLoaded', function () {
   typeText(firstLineElement, firstText);
 
   setTimeout(function () {
-    var delayBetweenCharacters = 70;
+    var delayBetweenCharacters = 75;
     var textIndex = 0;
     var typingInterval = setInterval(function () {
       if (textIndex < firstLineSecondText.length) {
@@ -98,7 +98,11 @@ document.addEventListener('DOMContentLoaded', function () {
 <h2><a href="https://www.example.com" target="_blank">LINKEDIN: www.example.com</a></h2>  
 </div>`;
 
+  let currentPanel = null;
+
   function showPanel(content) {
+    if (currentPanel) return;
+
     const panel = document.createElement('div');
     panel.className = 'panel';
     panel.innerHTML = `${content}<button class="close-button">&times;</button>`;
@@ -106,7 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const closeButton = panel.querySelector('.close-button');
     closeButton.addEventListener('click', function () {
-      hidePanel(panel);
+      hidePanel();
     });
 
     const overlay = document.createElement('div');
@@ -116,36 +120,39 @@ document.addEventListener('DOMContentLoaded', function () {
     currentPanel = panel;
   }
 
-  let currentPanel = null;
-
-  function togglePanel(content) {
-    if (!currentPanel) {
-      showPanel(content);
-    } else if (currentPanel.innerHTML === content) {
-      hidePanel(currentPanel);
-      currentPanel = null;
-    } else {
-      hidePanel(currentPanel);
-      showPanel(content);
+  function hidePanel() {
+    if (currentPanel) {
+      currentPanel.classList.add('closing');
+      setTimeout(() => {
+        currentPanel.remove();
+        const overlay = document.querySelector('.overlay');
+        if (overlay) {
+          overlay.remove();
+        }
+        currentPanel = null;
+      }, 500);
     }
   }
 
-  function hidePanel(panel) {
-    panel.classList.add('closing');
-    setTimeout(() => {
-      panel.remove();
-      const overlay = document.querySelector('.overlay');
-      if (overlay) {
-        overlay.remove();
-      }
-    }, 500);
-  }
+  document.addEventListener('click', function (event) {
+    if (currentPanel && !currentPanel.contains(event.target)) {
+      hidePanel();
+    }
+  });
 
   document.querySelectorAll('.dir-menu-content a').forEach(function (link) {
     link.addEventListener('click', function (event) {
+      event.stopPropagation();
       event.preventDefault();
       const content = getContentForLink(link.id);
-      togglePanel(`<div>${content}</div>`);
+      if (currentPanel) {
+        hidePanel();
+        setTimeout(() => {
+          showPanel(`<div>${content}</div>`);
+        }, 500);
+      } else {
+        showPanel(`<div>${content}</div>`);
+      }
     });
   });
 
