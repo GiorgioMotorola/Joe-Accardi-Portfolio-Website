@@ -288,13 +288,6 @@ li {
   color: #000000;
 }
 
-.about-title {
-  align-self: center;
-  text-align: center;
-  color: #000000;
-  font-size: 25px;
-}
-
 .about-container {
   display: flex;
   justify-content: center;
@@ -331,11 +324,12 @@ li {
 }
 
 .project-title,
-.contact-title {
+.contact-title,
+.about-title {
   align-self: center;
   text-align: center;
   color: #000000;
-  font-size: 25px;
+  font-size: 30px;
 }
 
 .projects-container {
@@ -517,7 +511,7 @@ input[type='file'] {
 @media (max-width: 500px) {
   * {
     max-width: 100%;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     overflow-x: hidden;
   }
 

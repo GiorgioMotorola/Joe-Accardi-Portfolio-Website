@@ -76,13 +76,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
   const aboutMeContent = `
     <div class="intro">
-    <div class="about-title">Hello, I'm <span style="color: grey; font-size: 25px; font-weight: 800;">Joe Accardi</span>
+    <div class="project-title">HELLO, I'M JOE ACCARDI</div>
 </div><div class="about-container">
     <img src="img/joe.jpg" alt="Joe" class="about-me-img">
     </div>
-    <div class="desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.    </div>`;
+    <div class="desc">As a seasoned IT professional with over 15 years of experience across small business and enterprise settings, my passion lies in simplifying technology for people. I take pride in empowering individuals to tackle complex computer problems by leveraging the latest tools and techniques. Through my expertise in building and managing infrastructures of various sizes, I have honed my ability to streamline processes and maximize efficiency, enabling organizations to achieve their full potential.</div>`;
 
   const projectsContent = `
   <div class="project-title">CHECK OUT MY PROJECTS</div>
