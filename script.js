@@ -84,30 +84,28 @@ document.addEventListener('DOMContentLoaded', function () {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.    </div>`;
 
-  const projectsContent = `<div class="project-title">Check out my <span style="color: grey; font-size: 25px; font-weight: 800;">Projects</span>
-  <div class="container">
-  <div class="project-container">
-  <a href="https://github.com/jcacc/OrderlyCLI" class="project-link" target="_blank">
-      <div class="project">
-        <h2>OrderlyCLI</h2>
-        <p>Order management system for multiple fulfillment centers. Python's Faker was used to generate data within 'input.csv'.</p>
-      </div>
+  const projectsContent = `
+  <div class="project-title">Check Out My Projects</div>
+  <div class="projects-container">
+  <div class="project">
+    <div class="tooltip">Order management system for multiple fulfillment centers. Python's Faker was used to generate data within 'input.csv'.</div>
+    <a href="https://github.com/jcacc/OrderlyCLI" target="_blank">
+      <img src="img/folder-1.png" alt="Project Folder">
+      <p>OrderlyCLI</p>
     </a>
   </div>
-  <div class="project-container">
-  <a href="https://github.com/jcacc/MrMoney" class="project-link" target="_blank">
-      <div class="project">
-        <h2>Mr. Money</h2>
-        <p>An ATM app that I created for the Code KY Final Project.</p>
-      </div>
+  <div class="project">
+    <div class="tooltip">ATM app that I created for the Code KY Final Project. It Utilizes and fufills the following project requirements: Master Loop, Uses a List, Hos more than one class. </div>
+    <a href="https://github.com/jcacc/MrMoney" target="_blank">
+      <img src="img/folder-2.png" alt="Project Folder">
+      <p>Mr. Money</p>
     </a>
   </div>
-  <div class="project-container">
-  <a href="https://github.com/jcacc/pyStatus" class="project-link" target="_blank">
-      <div class="project">
-        <h2>pyStatus</h2>
-        <p>A simple Tkinter-based Python application that controls RGB lighting by sending HTTP GET requests to a local server. Features an always-on-top GUI with color-coded buttons for user-friendly interaction.</p>
-      </div>
+  <div class="project">
+    <div class="tooltip">A Tkinter-based Python application that controls RGB lighting by sending HTTP GET requests to a local server. Features an always-on-top GUI with color-coded buttons for user-friendly interaction.</div>
+    <a href="https://github.com/jcacc/pyStatus" target="_blank">
+      <img src="img/folder-3.png" alt="Project Folder">
+      <p>pyStatus</p>
     </a>
   </div>
 </div>`;
