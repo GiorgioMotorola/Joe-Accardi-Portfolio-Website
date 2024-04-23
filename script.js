@@ -85,7 +85,7 @@ document.addEventListener('DOMContentLoaded', function () {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.    </div>`;
 
   const projectsContent = `
-  <div class="project-title">Check Out My Projects</div>
+  <div class="project-title">CHECK OUT MY PROJECTS</div>
   <div class="projects-container">
   <div class="project">
     <div class="tooltip">Order management system for multiple fulfillment centers. Python's Faker was used to generate data within 'input.csv'.</div>
@@ -110,12 +110,14 @@ document.addEventListener('DOMContentLoaded', function () {
   </div>
 </div>`;
 
-  const contactContent = `<div class="contact-title">Get in <span style="color: grey; font-size: 25px; font-weight: 800;">Touch</span></div>
-<div class="contact-container">
-<h2><a href="mailto:joe@example.com" target="_blank">EMAIL: joe@example.com</a></h2>
-<h2><a href="https://www.example.com" target="_blank">GITHUB: www.example.com</a></h2>
-<h2><a href="https://www.example.com" target="_blank">LINKEDIN: www.example.com</a></h2>  
-</div>`;
+  const contactContent = `
+  <div class="contact-title">GET IN TOUCH</div>
+  <div class="contact-container">
+  <a href="https://github.com/jcacc/" target="_blank" rel="noopener noreferrer" class="contact-icon"><i class="fab fa-github"></i></a>
+  <a href="https://www.linkedin.com/in/jaccardi/" target="_blank" rel="noopener noreferrer" class="contact-icon"><i class="fab fa-linkedin"></i></a>
+  <a href="https://learn.microsoft.com/en-us/users/jaccardi/" class="contact-icon"><i class="fab fa-windows"></i>
+  <a href="joe@accardi.xyz" class="contact-icon"><i class="far fa-envelope"></i></a>
+  </div>`;
 
   let currentPanel = null;
 
