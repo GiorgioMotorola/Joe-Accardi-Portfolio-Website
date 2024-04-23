@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const fileNames = ['resume.pdf', 'change-background.png'];
     if (fileNames.includes(inputText)) {
       if (inputText === 'resume.pdf') {
-        window.open('path_to_resume.pdf');
+        window.open('img/reusme template.pdf');
       } else if (inputText === 'change-background.png') {
         document.getElementById('imageInput').click();
         inputField.value = '';
