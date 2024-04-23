@@ -629,6 +629,7 @@ input[type='file'] {
 
   .prompt-for-text input {
     font-size: 10px;
+    width: 200px;
   }
 
   .windows-toolbar {
