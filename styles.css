@@ -516,7 +516,6 @@ input[type='file'] {
 
 @media (max-width: 500px) {
   * {
-    /* font-size: 13px; */
     max-width: 100%;
     margin: 0 auto;
     overflow-x: hidden;
