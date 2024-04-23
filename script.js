@@ -85,10 +85,31 @@ document.addEventListener('DOMContentLoaded', function () {
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.    </div>`;
 
   const projectsContent = `<div class="project-title">Check out my <span style="color: grey; font-size: 25px; font-weight: 800;">Projects</span>
-</div><div class="project-container">
-<div class="project-1"><h1>Project One</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
-<div class="project-2"><h1>Project Two</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
-<div class="project-3"><h1>Project Three</h1> <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec malesuada purus ac arcu fermentum, vel auctor est luctus. Duis ut magna id nulla congue tempus.</h3></div>
+  <div class="container">
+  <div class="project-container">
+  <a href="https://github.com/jcacc/OrderlyCLI" class="project-link" target="_blank">
+      <div class="project">
+        <h2>OrderlyCLI</h2>
+        <p>Order management system for multiple fulfillment centers. Python's Faker was used to generate data within 'input.csv'.</p>
+      </div>
+    </a>
+  </div>
+  <div class="project-container">
+  <a href="https://github.com/jcacc/MrMoney" class="project-link" target="_blank">
+      <div class="project">
+        <h2>Mr. Money</h2>
+        <p>An ATM app that I created for the Code KY Final Project.</p>
+      </div>
+    </a>
+  </div>
+  <div class="project-container">
+  <a href="https://github.com/jcacc/pyStatus" class="project-link" target="_blank">
+      <div class="project">
+        <h2>pyStatus</h2>
+        <p>A simple Tkinter-based Python application that controls RGB lighting by sending HTTP GET requests to a local server. Features an always-on-top GUI with color-coded buttons for user-friendly interaction.</p>
+      </div>
+    </a>
+  </div>
 </div>`;
 
   const contactContent = `<div class="contact-title">Get in <span style="color: grey; font-size: 25px; font-weight: 800;">Touch</span></div>

@@ -207,14 +207,14 @@ body {
   padding: 2.5rem;
 }
 
-a {
+.link-animation {
   color: inherit;
   text-decoration: none;
   position: relative;
   cursor: pointer;
 }
 
-a::before {
+.link-animation::before {
   content: '';
   position: absolute;
   bottom: -2px;
@@ -226,7 +226,7 @@ a::before {
   transition: width 0.3s ease;
 }
 
-a:hover::before {
+.link-animation:hover::before {
   width: 100%;
 }
 
@@ -293,7 +293,6 @@ li {
   text-align: center;
   color: #000000;
   font-size: 25px;
-  margin-top: 10%;
 }
 
 .about-container {
@@ -337,6 +336,7 @@ li {
   border: none;
   color: #000000;
   background-color: #e2dcd1;
+  display: none;
 }
 
 .project-title,
@@ -344,34 +344,79 @@ li {
   align-self: center;
   text-align: center;
   color: #000000;
-  font-size: 25px;
-  margin-top: 10%;
+  font-size: 15px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 5%;
 }
 
 .project-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 70vh;
-  gap: 80px;
-  text-align: center;
-  font-size: 12px;
+  margin-bottom: 5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.3s ease;
 }
 
-.project-1,
-.project-2,
-.project-3 {
-  box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
-    rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  transition: box-shadow 0.3s ease;
+.project {
+  padding: 20px;
+  background-color: #e2dcd1;
 }
 
-.project-1:hover,
-.project-2:hover,
-.project-3:hover {
-  box-shadow: rgba(60, 64, 67, 0.6) 0px 5px 15px 0px,
-    rgba(60, 64, 67, 0.3) 0px 10px 30px 5px;
+.project h2 {
+  margin-top: 0;
+}
+
+.project p {
+  margin-bottom: 0;
+  text-decoration: none;
+  font-weight: 400;
+  text-align: start;
+}
+
+.project-link {
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.project-link a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.project-link a:hover {
+  text-decoration: underline;
+}
+
+.project-container::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 0;
+  height: 0;
+  background-color: transparent;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  transition: width 0.4s ease, height 0.4s ease, top 0.4s ease, left 0.4s ease;
+  z-index: -1;
+}
+
+.project-container:hover::before {
+  width: calc(100% + 100px);
+  height: calc(100% + 100px);
+  top: -50px;
+  left: -50px;
+}
+
+.project-container:hover {
+  border-color: #007bff;
 }
 
 .contact-container {
