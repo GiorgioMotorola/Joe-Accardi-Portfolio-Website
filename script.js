@@ -249,3 +249,5 @@ document
       reader.readAsDataURL(file);
     }
   });
+
+//  Designed by Mike Weatherford => https://www.mweatherford.rocks/
